@@ -1,3 +1,3 @@
 [Subscription]
-key = "key-goes-here"
-url = "https://uksouth.api.cognitive.microsoft.com/face/v1.0/detect"
+key = key-goes-here
+url = https://uksouth.api.cognitive.microsoft.com/face/v1.0/detect
