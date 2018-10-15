@@ -99,8 +99,8 @@ def process_image_directory(
             result: Optional[Dict[str, Union[str, float]]] = process_image(
                 url, subscription_key, image_file
             )
-        except requests.exceptions.HTTPError:
-            LOG.error("Request to API for image: % failed", image_file)
+        except requests.exceptions.RequestException as err:
+            LOG.error("Request to API for image: % failed with error: %s", image_file, str(err))
             continue
 
         if not result:
@@ -123,7 +123,7 @@ def process_image_directory(
 
         output.append(row)
 
-        LOG.info("Sleeping for %d seconds to stay inside rate limit", sleep_secs)
+        LOG.debug("Sleeping for %d seconds to stay inside rate limit", sleep_secs)
         time.sleep(sleep_secs)
 
     return output
