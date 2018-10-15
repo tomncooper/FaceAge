@@ -1,6 +1,6 @@
 # FaceAge Script
 
-This script will process a directory of images through the Microsoft Azure [Cognative
+This script will process a directory of images through the Microsoft Azure [Cognitive
 Services API](https://azure.microsoft.com/en-gb/services/cognitive-services/) [Face
 API](https://docs.microsoft.com/en-us/azure/cognitive-services/face/) and save the resulting face age and emotion scores to a csv file.
 
